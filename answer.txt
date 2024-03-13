@@ -1,0 +1,105 @@
+/Bai 2.2.5 /
+
+import java.util.Scanner;
+
+class ex2_2_5{
+    public static void main (String args[]){
+        Scanner keyboard = new Scanner(System.in);
+    double a = keyboard.nextDouble();
+    double b = keyboard.nextDouble();
+    System.out.println(a + b);
+    System.out.println(a - b);
+    System.out.println(a * b);
+    }
+}
+
+/Bai 2.2.6/
+
+/Bai 6.3/
+
+import java.util.Scanner;
+
+class ex2_2_5{
+    public static void main (String args[]){
+        Scanner keyboard = new Scanner(System.in);
+    int n = keyboard.nextInt();
+    int i ;
+    for(i = 1 ;i <= n ; i++)
+    {
+         for(int j = 1 ;j <= n - i ; j++)
+         {
+            System.out.print(" ");
+         }
+         for (int j = 1 ;j < i ; j++)
+         {
+            System.out.print("*");
+         }
+         System.out.print("*");
+         for (int j = 1 ;j < i ; j++)
+         {
+            System.out.print("*");
+         }
+         for(int j = 1 ;j <= n - i ; j++)
+         {
+            System.out.print(" ");
+         }
+        System.out.print("\n");
+    }
+  }
+}
+
+/Bai 6.4/
+
+/Bai 6.5/
+
+import java.util.Scanner;
+
+class ex2_2_5{
+    public static void main (String args[]){
+     int[] arr = new int[]{1789,2035,1899,1456,2013};
+     for(int i = 0 ;i < arr.length - 1 ; i++)
+     {
+        for(int j = 0;j < arr.length ; j++)
+        {
+            if(arr[i] < arr[j]){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+     }
+     for(int i = 0 ;i < arr.length; i++){
+        System.out.print(arr[i] + " ");
+     }
+  }
+}
+
+/Bai 6.6/
+
+import java.util.Scanner;
+
+class ex2_2_5{
+    public static void main (String args[]){
+     int[][] a = new int[][]{{1,2},{3,4}};
+     int[][] b = new int[][]{{4,5},{6,7}};
+     if(a.length != b.length){
+        System.out.print("Cannot operate matrices additon");
+        System.exit(0);
+     }
+     for(int i = 0 ;i < a.length ; i++){
+        if(a[i].length != b[i].length ){
+            System.out.print("Cannot operate matrices additon");
+        System.exit(0);
+        }
+        for(int j = 0 ; j < a[i].length ; j++){
+            a[i][j] = a[i][j] + b[i][j];
+        }
+     }
+     for(int i = 0 ;i < a.length ; i++){
+        for(int j = 0 ; j < a[i].length ; j++){
+            System.out.print(a[i][j] + " ");
+        }
+        System.out.print("\n");
+     }
+  }
+}
