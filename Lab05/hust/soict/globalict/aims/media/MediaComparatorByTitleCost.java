@@ -1,0 +1,20 @@
+package Lab05.hust.soict.globalict.aims.media;
+import java.util.Comparator;
+
+public class MediaComparatorByTitleCost  implements Comparator<Media>{
+
+    @Override
+    public int compare(Media o1, Media o2) {
+        float cost1 = o1.getCost();
+        float cost2 = o2.getCost();
+        String title1 = o1.getTitle();
+        String title2 = o2.getTitle();
+        int comparison =  title1.compareTo(title2);
+        if(comparison == 0){
+            return Double.compare(cost2, cost1);
+        }else{
+            return comparison;
+        }
+    }
+
+}
